@@ -1,0 +1,161 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.converter-container {
+  text-align: center;
+  width: 100%;
+  max-width: 720px;
+  padding: 0 20px;
+}
+
+.company-logo {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.converter-container h2 {
+  color: #333;
+  margin-bottom: 0;
+  font-size: 1.8em;
+}
+
+.converter-container p {
+  color: #666;
+  margin-top: 5px;
+  font-size: 1.2em;
+}
+
+.converter-box {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-top: 24px;
+}
+
+.converter-title {
+  font-size: 1.44em;
+  margin-bottom: 24px;
+}
+
+.converter-title span {
+  font-size: 0.96em;
+  color: #888;
+}
+
+.converter-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currency-input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 300px;  
+  background-color: #fff; 
+}
+
+.currency-input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  text-align: left;
+  outline: none;
+  background-color: #fff; 
+}
+
+.currency-input::-webkit-outer-spin-button,
+.currency-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.currency-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.currency-selector {
+  padding: 12px;
+  border-left: 1px solid #ddd;
+  border-right: none; 
+  border-top: none; 
+  border-bottom: none; 
+  background-color: #fff;
+  font-size: 1em;
+  outline: none;
+  height: 100%;
+  width: 100px; 
+  text-align: center;
+  padding-right: 20px; 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none; 
+}
+.currency-selector-container {
+  position: relative;
+  width: 100%;
+}
+
+.currency-selector-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000;
+  transform: translateY(-50%);
+}
+
+.swap-button {
+  font-size: 1.8em;
+  margin: 0 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+}
+
+.swap-button:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .converter-form {
+    flex-direction: column;
+  }
+
+  .currency-input-container {
+    width: calc(100% - 24px);
+    margin-bottom: 12px;
+  }
+
+  .swap-button {
+    margin: 12px 0;
+  }
+}
